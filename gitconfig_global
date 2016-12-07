@@ -1,0 +1,53 @@
+[user]
+	name = ShadowStar
+	email = orphen.leiliu@gmail.com
+[core]
+	logallrefupdates = true
+	autocrlf = input
+	excludesfile = ~/.dotfiles/gitignore_global
+	attributesFile = ~/.dotfiles/gitattributes_global
+[commit]
+	template = ~/.dotfiles/gitcommit_template
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = true
+[pull]
+	rebase = true
+[push]
+	default = current
+[merge]
+	ff = false
+[alias]
+	addp = add -p
+	fc = fetch -p
+	fa = fetch -p --all
+	ss = status -uno -sb
+	st = status -sb
+	ci = commit -v -uno
+	co = checkout
+	br = branch -vv
+	bf = branch -f
+	ba = branch -vv -a
+	bd = branch-date
+	brnew = checkout --orphan
+	di = difftool --extcmd=icdiff -y
+	df = diff
+	dc = diff --cached
+	lg = log --name-status
+	mylog = !git log --author $(git config user.name)
+	info = config -l
+	mg = merge --no-ff
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpuser = orphen.leiliu@gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	confirm = auto
+[http]
+	cookiefile = ~/.gitcookies
+;	proxy = socks5://127.0.0.1:1080
+[https]
+;	proxy = socks5://127.0.0.1:1080
+

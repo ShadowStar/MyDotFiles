@@ -1,0 +1,12 @@
+#Feature (scope): <New feature or module>
+#Fix (scope): <BUG fix>
+#Docs (scope): <Just documents update>
+#Style (scope): <Just Style, format or spelling>
+#Refactor (scope): <Reconstruct or Redesign>
+#Test (scope): <Test unit update>
+#Support (scope): <Support tools or files update>
+
+#<Detail Message>
+
+#BREAKING CHANGE: <Detail>
+#Close Issue: <Issue No.>, ...
