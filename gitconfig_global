@@ -6,6 +6,7 @@
 	autocrlf = input
 	excludesfile = ~/.dotfiles/gitignore_global
 	attributesFile = ~/.dotfiles/gitattributes_global
+	editor = vim
 [commit]
 	template = ~/.dotfiles/gitcommit_template
 [color]
