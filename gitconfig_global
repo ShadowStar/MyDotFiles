@@ -24,7 +24,10 @@
 	addp = add -p
 	fc = fetch -p
 	fa = fetch -p --all
-	ss = status -uno -sb
+	sd = ls-files -d
+	sm = ls-files -m
+	so = ls-files -o --directory
+	ss = status -uno -s
 	st = status -sb
 	ci = commit -v -uno
 	co = checkout
