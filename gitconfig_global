@@ -40,7 +40,8 @@
 	df = diff
 	dc = diff --cached
 	lg = log --name-status
-	mylog = !git log --author $(git config user.name)
+	gp = "!git gc; git push"
+	mylog = "!git log --author $(git config user.name)"
 	info = config -l
 	mg = merge --no-ff
 [sendemail]
