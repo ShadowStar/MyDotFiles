@@ -46,7 +46,7 @@
 	mg = merge --no-ff
 	patch = !git --no-pager diff
 [pager]
-	diff = diff-so-fancy | less -ERX
+	diff = diff-so-fancy | less -eRX
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpuser = orphen.leiliu@gmail.com
