@@ -44,6 +44,9 @@
 	mylog = "!git log --author $(git config user.name)"
 	info = config -l
 	mg = merge --no-ff
+	patch = !git --no-pager diff
+[pager]
+	diff = diff-so-fancy | less -ERX
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpuser = orphen.leiliu@gmail.com
@@ -56,3 +59,6 @@
 [https]
 ;	proxy = socks5://127.0.0.1:1080
 
+[diff-so-fancy]
+	changeHunkIndicators = false
+	stripLeadingSymbols = false
