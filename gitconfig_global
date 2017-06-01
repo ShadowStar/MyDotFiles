@@ -62,3 +62,4 @@
 [diff-so-fancy]
 	changeHunkIndicators = false
 	stripLeadingSymbols = false
+	markEmptyLines = false
