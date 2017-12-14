@@ -13,13 +13,14 @@
 	branch = auto
 	diff = auto
 	status = auto
-	ui = true
 [pull]
 	rebase = true
 [push]
 	default = current
 [merge]
 	ff = false
+	conflictStyle = diff3
+	tool = vimdiff3
 [alias]
 	addp = add -p
 	fc = fetch -p
@@ -63,3 +64,8 @@
 	changeHunkIndicators = false
 	stripLeadingSymbols = false
 	markEmptyLines = false
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = red bold 52
+	newNormal = green
+	newHighlight = green bold 22
