@@ -37,7 +37,7 @@
 	ba = branch -vv -a
 	bd = branch-date
 	brnew = checkout --orphan
-	di = difftool --extcmd=icdiff -y
+	di = difftool --extcmd='icdiff -H' -y
 	df = diff
 	dc = diff --cached
 	lg = log --name-status
@@ -47,6 +47,7 @@
 	mg = merge --no-ff
 	patch = !git --no-pager diff
 [pager]
+	di = less -eRX
 	diff = diff-so-fancy | less -eRX
 [sendemail]
 	smtpserver = smtp.gmail.com
