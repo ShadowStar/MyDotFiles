@@ -14,13 +14,17 @@
 #        AUTHOR: ShadowStar, <orphen.leiliu@gmail.com>
 #  ORGANIZATION: Gmail
 #       CREATED: 05/22/2018 19:32:35
-#   LAST CHANGE:05/22/2018 19:53:20
+#   LAST CHANGE:05/22/2018 20:17:28
 #      REVISION:  ---
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
 
 DIR="$(dirname "$(realpath $0)")"
+
+if [ "${HOME}" == "$(dirname "${DIR}")" ]; then
+	DIR="$(basename ${DIR})"
+fi
 
 ln -sv ${DIR}/bash_profile ${HOME}/.bash_profile
 ln -sv ${DIR}/bashrc ${HOME}/.bashrc
