@@ -4,11 +4,11 @@
 [core]
 	logallrefupdates = true
 	autocrlf = input
-	excludesfile = ~/.dotfiles/gitignore_global
-	attributesFile = ~/.dotfiles/gitattributes_global
+	excludesfile = ~/.gitignore_global
+	attributesFile = ~/.gitattributes_global
 	editor = vim
 [commit]
-	template = ~/.dotfiles/gitcommit_template
+	template = ~/.gitcommit_template
 [color]
 	branch = auto
 	diff = auto
