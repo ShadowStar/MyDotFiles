@@ -55,6 +55,7 @@
 	di = less -eRX
 	diff = diff-so-fancy | less -eRX
 	patch = less -eRX
+	brmap = less -eRX
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpuser = orphen.leiliu@gmail.com
