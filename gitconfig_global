@@ -49,6 +49,7 @@
 	mg = merge --no-ff
 	patch = !git --no-pager diff
 	slog = "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold cyan)%h%C(reset) - %C(bold yellow)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold red)- %an%C(reset)%C(bold green)%d%C(reset)' --all"
+	brmap = "log --graph --simplify-by-decoration --pretty=format:'%d' --all"
 [pager]
 	slog = less -eRX
 	di = less -eRX
