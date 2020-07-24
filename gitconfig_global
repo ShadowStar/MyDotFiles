@@ -13,6 +13,8 @@
 	branch = auto
 	diff = auto
 	status = auto
+[log]
+	follow = true
 [rebase]
 	autoStash = true
 [pull]
