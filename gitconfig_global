@@ -55,6 +55,7 @@
 	brmap = "log --graph --simplify-by-decoration --pretty=format:'%d' --all --oneline"
 [pager]
 	log = ${PAGER:-less -eRX}
+	di = less -eRX
 	slog = less -eRX
 	diff = diff-so-fancy |less -eRX
 	brmap = less -eRX
