@@ -1,4 +1,5 @@
 #Feature (scope): <New feature or module>
+#Optimize (scope): <Optimize something>
 #Fix (scope): <BUG fix>
 #Docs (scope): <Just documents update>
 #Style (scope): <Just Style, format or spelling>
@@ -11,3 +12,4 @@
 
 #BREAKING CHANGE: <Detail>
 #Close Issue: <Issue No.>, ...
+#TODO: <Todo things>
