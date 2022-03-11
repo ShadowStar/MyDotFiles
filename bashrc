@@ -32,13 +32,16 @@ if [[ $- =~ i ]]; then
 	bind '"[B":history-search-forward'
 fi
 
-export PS1="\A \[\e[33;1m\]|$(user_remote_info)\[\e[34;1m\]\W \[\e[36;1m\]\\$\[\e[0m\] "
-
 if [[ $OSTYPE =~ "darwin" ]]; then
 	alias ls='ls -G -F'
 elif [[ $OSTYPE =~ "linux" ]]; then
 	alias ls='ls --color=auto -F'
+	if [ -e /etc/system-release ]; then
+		export dist="\[\e[35;1m\]`cat /etc/system-release | cut -d' ' -f1` "
+	fi
 fi
+
+export PS1="\A \[\e[33;1m\]|$(user_remote_info)${dist}\[\e[34;1m\]\W \[\e[36;1m\]\\$\[\e[0m\] "
 
 alias rm='rm -i'
 alias mv='mv -i'
