@@ -48,13 +48,16 @@ bindkey "[B" history-beginning-search-forward
 
 autoload -U colors && colors
 
-export PS1="%D{%H:%M} %{$fg_bold[yellow]%}|$(user_remote_info)%{$fg_bold[blue]%}%c %{$fg_bold[cyan]%}%#%{$reset_color%} "
-
 if [[ $OSTYPE =~ "darwin" ]]; then
 	alias ls='ls -G -F'
 elif [[ $OSTYPE =~ "linux" ]]; then
 	alias ls='ls --color=auto -F'
+	if [ -e /etc/system-release ]; then
+		export dist="%{$fg_bold[magenta]%}`cat /etc/system-release | cut -d' ' -f1` "
+	fi
 fi
+
+export PS1="%D{%H:%M} %{$fg_bold[yellow]%}|$(user_remote_info)${dist}%{$fg_bold[blue]%}%c %{$fg_bold[cyan]%}%#%{$reset_color%} "
 
 alias rm='rm -i'
 alias mv='mv -i'
