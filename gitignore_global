@@ -108,3 +108,6 @@ cscope.po.out
 .cvsignore
 */.cvsignore
 
+# --- Patched Temporary Files
+*.rej
+*.orig
