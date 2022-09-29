@@ -60,3 +60,8 @@ if command -v vimpager >/dev/null; then
 	export PAGER='vimpager'
 fi
 
+if [ -r /etc/profile.d/bash_completion.sh ]; then
+	. /etc/profile.d/bash_completion.sh
+elif [ -r /usr/local/etc/profile.d/bash_completion.sh ]; then
+	. /usr/local/etc/profile.d/bash_completion.sh
+fi
