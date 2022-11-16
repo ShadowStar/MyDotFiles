@@ -56,11 +56,9 @@
 	brmap = "brtree --all"
 	brcontain = "branch -v --contains"
 [pager]
-	log = ${PAGER:-less -eRX}
-	di = less -eRX
-	slog = less -eRX
 	diff = diff-so-fancy |less -eRX
-	brmap = less -eRX
+[format]
+	pretty = "format:%C(yellow)commit %C(bold cyan)%H %C(auto)%d%n%C(yellow)Author: %C(bold red)%an %C(magenta)<%aE>%n%C(yellow)Date:   %C(red)%ad%n%n    %>(8)%B"
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpuser = orphen.leiliu@gmail.com
