@@ -58,7 +58,7 @@
 [pager]
 	diff = diff-so-fancy |less -eRX
 [format]
-	pretty = "format:%C(yellow)commit %C(bold cyan)%H %C(auto)%d%n%C(yellow)Author: %C(bold red)%an %C(magenta)<%aE>%n%C(yellow)Date:   %C(red)%ad%n%n    %>(8)%B"
+	pretty = "format:%C(yellow)Commit: %C(bold cyan)%H%C(auto)%d%n%C(yellow)Author: %C(bold red)%an %C(magenta)<%aE>%n%C(yellow)Date:   %C(red)%ad%n%n    %>(8)%B"
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpuser = orphen.leiliu@gmail.com
