@@ -46,24 +46,29 @@ fi
 if [[ $OSTYPE =~ "darwin" ]]; then
 	DIST="macOS"
 	PATH=$PATH:/opt/bin:/opt/my_scripts
-	if command -v brew >/dev/null
+	if [[ -x /opt/homebrew/bin/brew ]]; then
+		HB=/opt/homebrew/bin/brew
+	elif [[ -x /usr/local/bin/brew ]]; then
+		HB=/usr/local/bin/brew
+	fi
+	if command -v $HB >/dev/null
 	then
-		LPATH=$(brew --prefix)
+		LPATH=$($HB --prefix)
 		GNUPATH=$(echo ${LPATH}/opt/*/libexec/gnubin | tr ' ' ':')
 		local bpath
-		bpath=$(brew --prefix gnu-getopt)
+		bpath=$($HB --prefix gnu-getopt)
 		if [[ -d "${bpath}" ]]; then
 			GNUPATH=$GNUPATH:"${bpath}"/bin
 		fi
-		bpath=$(brew --prefix gettext)
+		bpath=$($HB --prefix gettext)
 		if [[ -d "${bpath}" ]]; then
 			GNUPATH=$GNUPATH:"${bpath}"/bin
 		fi
-		bpath=$(brew --prefix bison)
+		bpath=$($HB --prefix bison)
 		if [[ -d "${bpath}" ]]; then
 			GNUPATH=$GNUPATH:"${bpath}"/bin
 		fi
-		bpath=$(brew --prefix powerlevel10k)
+		bpath=$($HB --prefix powerlevel10k)
 		if [[ -d "${bpath}" && $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
 			. "${bpath}"/powerlevel10k.zsh-theme
 		fi
