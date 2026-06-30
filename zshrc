@@ -154,8 +154,8 @@ unsetopt SHARE_HISTORY
 
 zstyle ':completion:*:*:*:*:*' menu select
 
-bindkey "[A" history-beginning-search-backward
-bindkey "[B" history-beginning-search-forward
+bindkey "[A" up-line-or-search
+bindkey "[B" down-line-or-search
 
 alias cp='cp -i'
 alias grep="grep --exclude 'tags' --exclude 'cscope.*' --binary-files=without-match --color=auto"
