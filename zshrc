@@ -72,6 +72,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 		if [[ -d "${bpath}" && $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
 			. "${bpath}"/powerlevel10k.zsh-theme
 		fi
+		unset bpath
 		export GNUPATH
 	fi
 	alias pkginfo="pkgutil -v --pkg-info"
