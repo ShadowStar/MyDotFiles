@@ -107,7 +107,9 @@ fi
 autoload -Uz compinit && compinit -i
 autoload -U colors && colors
 
-if [[ -d $HOME/.oh-my-zsh ]]; then
+if command -v starship >/dev/null && [[ -f $HOME/.config/starship.toml ]]; then
+	eval "$(starship init zsh)"
+elif [[ -d $HOME/.oh-my-zsh ]]; then
 	. $HOME/.oh-my-zsh/zshrc
 else
 	export PS1="%D{%H:%M} %{$fg_bold[yellow]%}|$(user_remote_info)${DIST} %{$fg_bold[blue]%}%c %{$fg_bold[cyan]%}%#%{$reset_color%} "
