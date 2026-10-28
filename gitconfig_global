@@ -52,7 +52,7 @@
 	mg = merge --no-ff
 	patch = !git --no-pager diff
 	slog = "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold cyan)%h%C(reset) - %C(bold yellow)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold red)- %an%C(reset)%C(bold green)%d%C(reset)' --all"
-	brtree = "log --graph --simplify-by-decoration --pretty=format:'%d' --oneline"
+	brtree = "log --graph --simplify-by-decoration --format=format:'%C(yellow)%h %C(red)%cs%C(auto)%d %C(reset)%s'"
 	brmap = "brtree --all"
 	brcontain = "branch -v --contains"
 [pager]
