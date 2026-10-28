@@ -174,8 +174,8 @@ if command -v vim >/dev/null; then
 	alias vi='vim -O'
 fi
 
-if command -v vimpager >/dev/null; then
-	export PAGER='vimpager'
+if command -v vimcat >/dev/null; then
+	export PAGER='vimcat | less -eRX'
 fi
 
 ulimit -n 524288
